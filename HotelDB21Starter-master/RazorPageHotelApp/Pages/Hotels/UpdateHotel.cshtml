@@ -1,0 +1,59 @@
+﻿@page
+@model RazorPageHotelApp.Pages.Hotels.UpdateHotelModel
+@{
+    ViewData["Title"] = "UpdateHotel";
+
+}
+
+<h1>Hotel to update</h1>
+<dl class="row">
+    <dl class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Hotel.Navn)
+    </dl>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Hotel.Navn)
+    </dd>
+    <dl class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Hotel.Adresse)
+    </dl>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Hotel.Adresse)
+    </dd>
+    <dl class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Hotel.HotelNr)
+    </dl>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Hotel.HotelNr)
+    </dd>
+</dl>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="None" class="text-danger">
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Hotel.HotelNr" class="control-label"></label>
+            <input asp-for="@Model.Hotel.HotelNr" class="form-control"/>
+            <span asp-validation-for="@Model.Hotel.HotelNr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Hotel.Adresse" class="control-label"></label>
+            <input asp-for="@Model.Hotel.Adresse" class="form-control" />
+            <span asp-validation-for="@Model.Hotel.Adresse" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Hotel.Navn" class="control-label"></label>
+            <input asp-for="@Model.Hotel.Navn" class="form-control" />
+            <span asp-validation-for="@Model.Hotel.Navn" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+
+    <input type="submit" value="create" class="btn btn-primary" />
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>

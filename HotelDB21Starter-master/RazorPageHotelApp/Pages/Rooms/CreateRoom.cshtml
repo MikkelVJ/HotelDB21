@@ -1,0 +1,42 @@
+﻿@page
+@model RazorPageHotelApp.Pages.Rooms.CreateRoomModel
+@{
+    ViewData["Title"] = "CreateRoom";
+
+}
+<h1>Create a hotel</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="None" class="text-danger">
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Room.RoomNr" class="control-label"></label>
+            <input asp-for="@Model.Room.RoomNr" class="form-control" />
+            <span asp-validation-for="@Model.Room.RoomNr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Room.HotelNr" class="control-label"></label>
+            <input readonly asp-for="@Model.hotelNr" class="form-control" />
+            <span asp-validation-for="@Model.Room.HotelNr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Room.Types" class="control-label"></label>
+            <input asp-for="@Model.Room.Types" class="form-control" />
+            <span asp-validation-for="@Model.Room.Types" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Room.Pris" class="control-label"></label>
+            <input asp-for="@Model.Room.Pris" class="form-control" />
+            <span asp-validation-for="@Model.Room.Pris" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+
+    <input type="submit" value="create" class="btn btn-primary" />
+</div>
+<div>
+    <a asp-page="GetAllRooms">Back to List</a>
+</div>
